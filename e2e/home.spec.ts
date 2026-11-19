@@ -4,7 +4,9 @@ test('首页可以访问并显示站点名', async ({ page }) => {
     const consoleErrors: string[] = [];
 
     page.on('console', (msg) => {
-        consoleErrors.push(msg.text());
+        if (msg.type() === 'error') {
+            consoleErrors.push(msg.text());
+        }
     });
 
     const response = await page.goto('/');
