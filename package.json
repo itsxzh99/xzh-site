@@ -11,7 +11,8 @@
     "dev": "next dev",
     "build": "next build",
     "preview": "serve out -l 3000",
-    "test:e2e": "npm run build && playwright test"
+    "test:e2e": "npm run build && playwright test",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
